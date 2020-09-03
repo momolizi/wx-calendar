@@ -1,0 +1,36 @@
+<!--components/date/date.wxml-->
+<view class="date">
+  <view class="dateInfo">
+    <view wx:if="{{isRank}}" class="parts">
+      <view>{{startDate}}</view>
+      <text>-</text>
+      <view>{{endDate}}</view>
+    </view>
+    <view wx:else class="part">
+      <view>{{selectedDate}}</view>
+    </view>
+      
+  </view>
+  <view class="head">
+    <view class="btn" bindtap="propMonth"> 《 </view>
+    <view><text>{{year}}年{{month + 1}}月</text></view>
+    <view class="btn" bindtap="nextMonth"> 》 </view>
+  </view>
+  <view class="box">
+    <view class="header">
+      <block wx:for="{{week}}" wx:key="{{index}}">
+        <view class="item">{{item}}</view>
+      </block>
+    </view>
+    <view class="body">
+      <block wx:for="{{dates}}" wx:key="{{index}}">
+        <view class="item {{item.disabled ? 'disabled' : ''}} {{item.isWeekday ? 'week' : ''}} {{item.isActive ? 'active': ''}} {{item.isOver ? 'isover' : ''}}" bindtap="selectDate" data-index="{{index}}">{{item.date}}</view>
+      </block>
+    </view>
+  </view>
+  <!-- <button class="btn" type="primary" >上一月</button>
+  <button class="btn" type="primary" >下一月</button> -->
+  <!-- <view class="test">hello world</view>
+  <view>{{'选择的日期为:' + selectedDate}}</view> -->
+  
+</view>

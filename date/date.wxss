@@ -1,0 +1,102 @@
+/* components/date/date.wxss */
+/* pages/date/date.wxss */
+.date {
+  overflow: hidden;
+}
+.dateInfo {
+  width: 100%;
+  height: 60rpx;
+  margin: 20rpx auto;
+}
+.dateInfo .part {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.dateInfo .part view {
+  height: 60rpx;
+  width: 100%;
+  text-align: center;
+  /* padding: 0 40rpx; */
+  box-sizing: border-box;
+  line-height: 60rpx;
+  background: #fff;
+}
+.dateInfo .parts {
+  padding: 0 40rpx;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.dateInfo .parts view{
+  height: 60rpx;
+  width: 300rpx;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  background: #fff;
+}
+
+.head{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+.box {
+  width: 700rpx;
+  margin: 30rpx auto;
+}
+.box .header {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+.box .header .item {
+  flex: 1;
+  text-align: center;
+}
+.box .body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box .body .item {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.box .body .item.isover {
+  background: #ccc !important;
+  color: #999 !important;
+}
+/* .box .body .item.disabled {
+  background: #ccc !important;
+  color: #999 !important;
+} */
+/* .box .body .item.week {
+  background: red;
+  color: #fff;
+} */
+.box .body .item.active {
+  background: #48B7FF;
+  color: #fff;
+}
+
+.test {
+  font-family: 'DIN'; 
+  /* font-weight: bold;  */
+  font-style: normal;
+  font-size: 40rpx;
+}
